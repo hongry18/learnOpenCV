@@ -1,3 +1,0 @@
-/Users/hongry/workspace/work/invidual/opencv/learnOpenCV/chapter01/helloCV/CMakeFiles/rebuild_cache.dir
-/Users/hongry/workspace/work/invidual/opencv/learnOpenCV/chapter01/helloCV/CMakeFiles/edit_cache.dir
-/Users/hongry/workspace/work/invidual/opencv/learnOpenCV/chapter01/helloCV/CMakeFiles/helloCV.dir
