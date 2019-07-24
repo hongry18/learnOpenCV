@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 # opencv DirPath
 set(OpenCV_DIR "/usr/local/utils/opencv/4.1.0/lib/cmake/opencv4/")
 
-project(helloCV)
+project(matOp)
 
 find_package(OpenCV REQUIRED)
 
@@ -17,6 +17,6 @@ message(STATUS "    version: ${OpenCV_VERSION}")
 message(STATUS "    libraries: ${OpenCV_LIBS}")
 message(STATUS "    inlcude path: ${OpenCV_INCLUDE_DIRS}")
 
-add_executable(helloCV main.cpp)
+add_executable(matOp main.cpp)
 
-target_link_libraries(helloCV LINK_PRIVATE ${OpenCV_LIBS})
+target_link_libraries(matOp LINK_PRIVATE ${OpenCV_LIBS})
