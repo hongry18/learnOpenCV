@@ -11,6 +11,7 @@ void matOp4();
 void matOp5();
 void matOp6();
 void matOp7();
+void matOp8();
 void suffix();
 
 int main() {
@@ -22,6 +23,7 @@ int main() {
     matOp5();
     matOp6();
     matOp7();
+    matOp8();
 
     return 0;
 }
@@ -59,7 +61,7 @@ void matOp1() {
     m5.setTo(1.f);
 }
 
-void matOp2(){
+void matOp2() {
     cv::Mat i1 = cv::imread("./dog.bmp");
     cv::Mat i2 = i1;
     cv::Mat i3;
@@ -80,7 +82,7 @@ void matOp2(){
     suffix();
 }
 
-void matOp3(){
+void matOp3() {
     cv::Mat i1 = cv::imread("./cat.bmp");
     if (!i1.data) {
         return;
@@ -98,7 +100,7 @@ void matOp3(){
     suffix();
 }
 
-void matOp4(){
+void matOp4() {
     cv::Mat i1 = cv::Mat::zeros(3, 4, CV_8UC1);
     uchar *d = i1.data;
 
@@ -127,7 +129,7 @@ void matOp4(){
     cout << i1 << endl;
 }
 
-void matOp5(){
+void matOp5() {
     cv::Mat img = cv::imread("lenna.bmp");
 
     printf("width: %d\n", img.cols);
@@ -140,7 +142,7 @@ void matOp5(){
     cout << m << endl;
 }
 
-void matOp6(){
+void matOp6() {
     float d[] = {1,1,2,3};
     cv::Mat m1(2,2,CV_32FC1, d);
     cout << "m1: " << m1 << endl;
@@ -154,7 +156,7 @@ void matOp6(){
     cout << "m1.t()\n " << m1 << endl;
 }
 
-void matOp7(){
+void matOp7() {
     cv::Mat img = cv::imread("./lenna.bmp", cv::IMREAD_GRAYSCALE);
 
     cv::Mat imgf;
@@ -173,4 +175,12 @@ void matOp7(){
     cv::Mat m3 = cv::Mat::ones(1, 4, CV_8U) * 255;
     m1.push_back(m3);
     cout << m1 << endl;
+}
+
+void matOp8() {
+    cv::Mat m1(3, 3, CV_8U);
+    cv::Mat m2(3, 3, CV_8UC3);
+
+    cout << "m1 step1(): " << m1.step1() << endl;
+    cout << "m2 step1(): " << m2.step1() << endl;
 }
